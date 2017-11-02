@@ -22,7 +22,7 @@ existsAndNotNULL <- function(var, envir=parent.frame(), strict=FALSE){
 #' @seealso assign
 setDefault <- function(var, defaults, pos=parent.frame()){
     if (length(var)>1) stop("'var' must have length 1.")
-    if (!is.chracter(var)) stop("'var' must be a character string.")
+    if (!is.character(var)) stop("'var' must be a character string.")
     assignval <- defaults[[var]]
     cat("Assigning ", var, " to default of ", assignval, "\n")
     assign(var, assignval, pos=pos)
