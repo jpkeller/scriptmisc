@@ -1,7 +1,7 @@
 Package: scriptmisc
 Type: Package
 Title: Miscellaneous Functions for Scripting and Batch Computing in R
-Version: 0.0.1.2
+Version: 0.0.1.3
 Author: Joshua Keller
 Maintainer: Joshua Keller <jkelle46@jhu.edu>
 Description: A collection of functions to help with various aspects of scripting and batch computing. Not necessarily unified in theme.

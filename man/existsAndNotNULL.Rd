@@ -4,14 +4,14 @@
 \alias{existsAndNotNULL}
 \title{Tests whether an object exists and is non-null}
 \usage{
-existsAndNotNULL(var, envir = parent.frame(), strict = FALSE)
+existsAndNotNULL(var, envir = parent.frame(), inherits = TRUE)
 }
 \arguments{
 \item{var}{Object name as character string}
 
 \item{envir}{Environment in which to check}
 
-\item{scrit}{Should only the specified environment be checked. Passed to \code{inherits} argument of \code{\link{exists}}.}
+\item{inherits}{Passed to \code{inherits} argument of \code{\link{exists}}.}
 }
 \value{
 TRUE if the object both exists and is not NULL. FALSE otherwise.

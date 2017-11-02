@@ -5,15 +5,15 @@
 \alias{check_and_set_Default}
 \title{Sets variable to default value}
 \usage{
-setDefault(var, defaults, pos = parent.frame(), verbose = TRUE)
+setDefault(var, defaults, envir = parent.frame(), verbose = TRUE)
 
-check_and_set_Default(var, defaults = NULL, pos = parent.frame(),
-  verbose = TRUE)
+check_and_set_Default(var, defaults = NULL, envir = parent.frame(),
+  inherits = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{var}{Name of object to set to default value.}
 
-\item{pos}{Environment in which assignment to \code{var} is done. Passed to \code{\link{assign}}.}
+\item{envir}{Environment in which to set the value.}
 
 \item{default}{Named list of default values.  The name of one (and only one) element must match the provided string in \code{var}.}
 }
