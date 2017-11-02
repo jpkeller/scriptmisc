@@ -20,11 +20,11 @@ existsAndNotNULL <- function(var, envir=parent.frame(), strict=FALSE){
 #' @export
 #' @author Joshua Keller
 #' @seealso assign
-setDefault <- function(var, defaults, pos=parent.frame()){
+setDefault <- function(var, defaults, pos=parent.frame(), verbose=TRUE){
     if (length(var)>1) stop("'var' must have length 1.")
     if (!is.character(var)) stop("'var' must be a character string.")
     assignval <- defaults[[var]]
-    cat("Assigning ", var, " to default of ", assignval, "\n")
+    if (verbose) cat("Assigning ", var, " to default of ", assignval, "\n")
     assign(var, assignval, pos=pos)
 }
 
@@ -32,10 +32,10 @@ setDefault <- function(var, defaults, pos=parent.frame()){
 #' @rdname  setDefault
 #' @details \code{check_and_set_Default} First checks to see if a variable has been set to a value. If not, it calls \code{setDefaul} to set to default value.
 #' @export
-check_and_set_Default <- function(var, defaults=NULL, pos=parent.frame()){
+check_and_set_Default <- function(var, defaults=NULL, pos=parent.frame(), verbose=TRUE){
     donothing <- existsAndNotNULL(var)
     if (!donothing){
-        setDefault(var, defaults, pos=pos)
+        setDefault(var, defaults, pos=pos, verbose=verbose)
     }
     invisible(get(var));
 }

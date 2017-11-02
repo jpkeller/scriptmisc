@@ -5,9 +5,10 @@
 \alias{check_and_set_Default}
 \title{Sets variable to default value}
 \usage{
-setDefault(var, defaults, pos = parent.frame())
+setDefault(var, defaults, pos = parent.frame(), verbose = TRUE)
 
-check_and_set_Default(var, defaults = NULL, pos = parent.frame())
+check_and_set_Default(var, defaults = NULL, pos = parent.frame(),
+  verbose = TRUE)
 }
 \arguments{
 \item{var}{Name of object to set to default value.}
